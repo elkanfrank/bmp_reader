@@ -12,12 +12,6 @@
 
 typedef unsigned char BYTE;
 
-typedef struct		s_file
-{
-	BYTE			*raw_data;
-	unsigned int	size; 		// total filesize
-}					t_file;
-
 #pragma pack(push, 1)
 
 typedef struct		s_pixel
@@ -60,11 +54,15 @@ typedef struct		s_bmp_info
 
 #pragma pack(pop)
 
+#pragma pack(push, 1)
+
 typedef struct		s_bmp
 {
 	t_bmp_info		info;
 	t_pixel			*pixels;
 }					t_bmp;
+
+#pragma pack(pop)
 
 unsigned int		bits32_to_int(BYTE bytes[]);
 unsigned int		bits16_to_int(BYTE bytes[]);
@@ -72,8 +70,6 @@ unsigned int		uint32_sub_abs(unsigned int a, unsigned int b);
 void				print_bytes(BYTE *bytes, unsigned int len);
 void				print_meta_data(t_bmp_info info);
 void				print_pixel(t_pixel pixel);
-unsigned char		*ft_bytejoin(BYTE *s1, BYTE *s2, unsigned int bytes_read);
 void				exit_with_error(const char *message);
-t_file* 			read_file(int fd);
 
 #endif

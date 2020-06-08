@@ -47,10 +47,12 @@ unsigned char		*ft_bytejoin(BYTE *s1, BYTE *s2, unsigned int bytes_read)
 void		print_meta_data(t_bmp_info info)
 {
 	printf("info size : %u\n", info.info_size);
-	printf("img size  : %u\n", info.img_size);
-	printf("height    : %u\n", info.height);
 	printf("width     : %u\n", info.width);
+	printf("height    : %u\n", info.height);
+	printf("planes    : %u\n", info.planes);
 	printf("bpp       : %u\n", info.bits_per_pixel);
+	printf("comp      : %u\n", info.compression);
+	printf("img size  : %u\n", info.img_size);
 }
 
 void				print_pixel(t_pixel pixel)
