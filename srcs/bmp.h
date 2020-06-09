@@ -1,5 +1,5 @@
-#ifndef PNG_H
-# define PNG_H
+#ifndef BMP_H
+# define BMP_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -57,7 +57,7 @@ typedef struct		s_bmp_info
 typedef struct		s_bmp
 {
 	t_bmp_info		info;
-	t_pixel			*pixels;
+	t_pixel			**pixels;
 }					t_bmp;
 
 #pragma pack(pop)
