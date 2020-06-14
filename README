@@ -10,7 +10,7 @@ gcc [ c_file ] lib_bmp.a libft/libft.a
 ```
 
 ## Read BMP example
-```c
+```c_cpp
 t_bmp	bmp;
 int		fd;
 
@@ -28,7 +28,7 @@ print_meta_data(bmp.info);
 
 This struct gets returned by read_bmp() and has all the pixels and a pointer to t_bmp_info
 
-```c
+```c_cpp
 typedef struct		s_bmp
 {
 	t_bmp_info		info;
