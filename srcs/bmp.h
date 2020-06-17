@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <stdint.h>
 #include "../libft/src/libft.h"
-#include "../minilibx_macos/mlx.h"
 
 #pragma pack(push, 1)
 
@@ -57,7 +56,7 @@ typedef struct		s_bmp_info
 typedef struct		s_bmp
 {
 	t_bmp_info		info;
-	t_pixel			**pixels;
+	t_pixel			*pixels;
 }					t_bmp;
 
 #pragma pack(pop)
